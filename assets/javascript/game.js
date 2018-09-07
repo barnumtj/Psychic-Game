@@ -31,9 +31,13 @@ document.onkeyup = function(event) {
     
     if (userGuess == computerGuess) {
         wins++;
-    var wins1 = document.getElementById("winner");
+   
+    $("#winner1").html("Wins: " + wins)
     alert("Winner, Congratulations")
+    
     console.log(wins);
+    reset();
+      
     
   
     }
@@ -44,7 +48,20 @@ document.onkeyup = function(event) {
     losses1.textContent = "Losses: " + losses;
     alert("wahhh, wahhh, wahhhh.")
     console.log(losses)
+    reset();
+    
     }
+
+function reset() {
+    lettersguessed = [];
+    guessesleft = 9
+    guessesleft1.textContent = "Guesses left: 9";
+    letterArray.textContent = "Your guesses so far: " 
+   
+      
+
+
+} 
     
 }
 
